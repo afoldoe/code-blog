@@ -1,3 +1,4 @@
+var projects = [];
 var navbutton = document.getElementById("buttonNav");
 navbutton.addEventListener("click", showMenu);
 function showMenu() {
@@ -13,11 +14,14 @@ function showMenu() {
 function Project (opts) {
   this.publishedOn = opts.publishedOn;
   this.author = opts.author;
-  this.title = opts.title
+  this.title = opts.title;
+  this.category = opts.category
 }
 
 Project.prototype.toHTML = function() {
+  //clones section for projects to be inputed
   var $newProject = $('article.template').clone();
+  $newProject.attr('data-category', this.category);
 
   $newProject.find('h1').html(this.title);
 
@@ -28,3 +32,15 @@ Project.prototype.toHTML = function() {
   $newProject.removeClass('template');
   return $newProject;
 }
+
+projectData.sort(function(a,b) {
+  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+});
+
+projectData.forEach(function(ele) {
+  projects.push(new Project(ele));
+})
+
+projects.forEach(function(a){
+  $('#projects').append(a.toHtml())
+});
