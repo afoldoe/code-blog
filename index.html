@@ -1,31 +1,32 @@
 <!DOCTYPE>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Arielle | Web Developer</title>
-    <link rel="stylesheet" type="text/css" src="css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" src="css/normalize.css"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
   </head>
   <body>
 
-    <header id="header">
+    <header id="header" class="container-fluid">
       <span id="buttonNav"><a><img src="img/menuNav.png" /></a></span>
       <img id="profilePic" src="img/profilepic.jpg">
       <h1>Arielle Foldoe</h1>
       <h2>Junior Developer</h2>
       <a href="#projects" class="btn btn--s">View Portfolio</a>
-      <div id="navDiv">
+      <nav id="navDiv">
         <ul>
-          <a href="#projects"><li class="navLinks">PORTFOLIO</li></a>
-          <a href="about.html"><li class="navLinks">ABOUT</li></a>
-          <a href="contact.html"><li class="navLinks">CONTACT</li></a>
+          <a href="#projects"><li data-content="projects" class=".tab">PORTFOLIO</li></a>
+          <li data-content="about" class=".tab"><a href="#">ABOUT</a></li>
         </ul>
       </div>
     </header>
 
-    <section id="projects">
+    <section id="projects" class="tab-content container">
       <article class="template" data-category="">
           <header>
             <h1>Title</h1>
@@ -34,19 +35,37 @@
               published <time pubdate datetime="2000-01-01">Publish Time</time>
             </div>
           </header>
-          <section class="article-body"></section>
+          <section class="project-body"></section>
+          <a href="#" class="read-on">Read on &rarr;</a>
         </article>
     </section>
 
-    <footer>
+    <section id="about" class="tab-content container">
+        <header>
+          Welcome to my humble domain!
+        </header>
+        <section>
+          <h1>Some of my intrests:</h1>
+          <ul>
+            <li>Coding</li>
+            <li>Sharing what I've learned</li>
+            <li>Hanging with my family</li>
+          </ul>
+        </section>
+      </section>
+
+    <footer class="container-fluid">
       <a href="https://www.facebook.com/arielle.foldoe"><img src="img/facebook-logo.png" height="20px" alt="Facebook Logo"></a>
       <a href="https://twitter.com/a_foldoe"><img src="img/twitter-logo.png" height="20px "alt="Twitter Logo"></a>
       <a href="https://github.com/afoldoe"><img src="img/GitHub_Logo.png" height="20px" alt="GitHub Logo"></a>
       <p>&copy; 2016 Arielle Foldoe</p>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-1.12.3.js"   integrity="sha256-1XMpEtA4eKXNNpXcJ1pmMPs8JV+nwLdEqwiJeCQEkyc="   crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
     <script type="text/javascript" src="eslintrc.js"></script>
+    <script type="text/javascript" src="scripts/projectView.js"></script>
+    <script type="text/javascript" src="scripts/projects.js"></script>
     <script type="text/javascript" src="scripts/script.js"></script>
   </body>
 </html>
