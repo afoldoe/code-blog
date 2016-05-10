@@ -1,7 +1,7 @@
 var projectView = {};
 
 projectView.handleMainNav = function() {
-  $('#navDiv').on('click', 'li', function(e) {
+  $('.nav').on('click', 'li', function(e) {
     e.preventDefault();
     var tab = $(this).attr('data-content');
     console.log(tab);
@@ -21,8 +21,14 @@ projectView.setTeasers = function() {
   });
 };
 
+projectView.showNav = function() {
+  $('#buttonNav').on('click', function() {
+    $('nav').toggle();
+  });
+}
 
 $(document).ready(function() {
   projectView.handleMainNav();
   projectView.setTeasers();
+  projectView.showNav();
 });

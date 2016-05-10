@@ -1,15 +1,4 @@
 var projects = [];
-var navbutton = document.getElementById("buttonNav");
-navbutton.addEventListener("click", showMenu);
-function showMenu() {
-  var div = document.getElementById("navDiv");
-  if (div.style.display != "none") {
-		div.style.display = "none";
-	}
-	else {
-		div.style.display = "block";
-	}
-}
 
 function Project (opts) {
   this.author = opts.author;

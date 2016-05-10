@@ -12,21 +12,25 @@
   </head>
   <body>
 
-    <header id="header" class="container-fluid">
-      <span id="buttonNav"><a><img src="img/menuNav.png" /></a></span>
-      <img id="profilePic" src="img/profilepic.jpg">
-      <h1>Arielle Foldoe</h1>
-      <h2>Junior Developer</h2>
-      <a href="#projects" class="btn btn--s">View Portfolio</a>
-      <nav id="navDiv">
-        <ul>
-          <a href="#projects"><li data-content="projects" class=".tab">PORTFOLIO</li></a>
-          <li data-content="about" class=".tab"><a href="#">ABOUT</a></li>
-        </ul>
-      </div>
-    </header>
+    <section class="container-fluid text-xs-center" id="header">
+      <header>
+        <span id="buttonNav"><a><img src="img/menuNav.png" /></a></span>
+        <img id="profilePic" src="img/profilepic.jpg">
+        <h1 class="display-4">
+          Arielle Foldoe
+          <small class="text-muted">Junior Developer</small>
+        </h1>
+        <a href="#projects" class="btn btn--s">View Portfolio</a>
+        <nav>
+          <ul class="nav">
+            <a class="nav-link" href="#projects"><li data-content="projects" class=".tab nav-item">PORTFOLIO</li></a>
+            <li data-content="about" class=".tab nav-item"><a class="nav-link" href="#">ABOUT</a></li>
+          </ul>
+        </div>
+      </header>
+    </section>
 
-    <section id="projects" class="tab-content container">
+    <section id="projects" class="tab-content container text-xs-center">
       <article class="template" data-category="">
           <header>
             <h1>Title</h1>
@@ -40,21 +44,21 @@
         </article>
     </section>
 
-    <section id="about" class="tab-content container">
+    <section id="about" class="tab-content container text-xs-center">
         <header>
           Welcome to my humble domain!
         </header>
         <section>
           <h1>Some of my intrests:</h1>
-          <ul>
-            <li>Coding</li>
-            <li>Sharing what I've learned</li>
-            <li>Hanging with my family</li>
+          <ul class="list-unstyled list-group">
+            <li class="list-group-item">Coding</li>
+            <li class="list-group-item">Sharing what I've learned</li>
+            <li class="list-group-item">Hanging with my family</li>
           </ul>
         </section>
       </section>
 
-    <footer class="container-fluid">
+    <footer class="container-fluid text-xs-center">
       <a href="https://www.facebook.com/arielle.foldoe"><img src="img/facebook-logo.png" height="20px" alt="Facebook Logo"></a>
       <a href="https://twitter.com/a_foldoe"><img src="img/twitter-logo.png" height="20px "alt="Twitter Logo"></a>
       <a href="https://github.com/afoldoe"><img src="img/GitHub_Logo.png" height="20px" alt="GitHub Logo"></a>
