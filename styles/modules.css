@@ -6,9 +6,36 @@ article {
 .display-4 {
   margin-top: 25%;
 }
+#projects {
+  border-bottom: 2px solid black;
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
 #about {
-  padding: 2rem;
+  padding-top: 5%;
+  padding-bottom: 5%;
   margin-top: 2rem;
+  border-bottom: 2px solid black;
+}
+#skills {
+  border-bottom: 2px solid black;
+  margin-top: 5%;
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+#skills1 {
+  border-right: 2px solid black;
+}
+#profilePic {
+  width: 80%;
+  height: 50%;
+  border-radius: 15%;
+}
+#contact {
+
+}
+#contact1 {
+  border-right: 2px solid black;
 }
 /* Media Queries*/
 @media only screen and (min-width : 768px) and (max-width : 1400px) {

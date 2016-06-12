@@ -66,6 +66,9 @@ li[data-content="about"] {
   left: 0;
   z-index: 1;
 }
+#skills {
+
+}
 #header {
   background-color: #DBB93F;
   width: 100%;

@@ -47,14 +47,16 @@
             <!-- <img id="profilePic" src="img/profilepic.jpg"> -->
             <h1 class="display-4">
               Arielle Foldoe
-              <small class="text-muted">Front End Developer</small>
+            <small class="text-muted">Front End Developer</small>
             </h1>
+            <i class="fa fa-bicycle"><span></span></i>
             <a href="#projects" class="btn btn--s">View Portfolio</a>
           </header>
         </div>
         <!-- /header -->
       </section>
       <!-- projects section -->
+
       <section id="projects" class="tab-content container">
         <div class="container text-xs-center">
           <div class="row">
@@ -63,11 +65,48 @@
       </section>
       <!-- /projects section -->
 
+      <!-- skills -->
+        <div class="container" id="skills">
+          <div class="row">
+            <section class="col-md-6" id="skills1">
+              <h3 class="h3">Aaniin! (Hello!)</h3>
+              <p>I'm Arielle: a front-end developer fascinated with JavaScript, awed by CSS, and curious about everything else to learn. Dedication to creating web applications scaled to grow with excellent base structure, a deep love of logical puzzles, attention to detail, and a thirst for knowledge fuels my quest to remain up-to-date on modern engineering technologies and approaches.</p>
+            </section>
+            <section class="col-md-2">
+              <h4 class="h4">HTML</h4>
+              <ul class="list-unstyled list-group">
+                <li>HTML5</li>
+                <li>Handlebars</li>
+              </ul>
+            </section>
+            <section class="col-md-2">
+              <h4 class="h4">CSS</h4>
+              <ul class="list-unstyled list-group">
+                <li>Responsive Design</li>
+                <li>Bootstrap</li>
+                <li>SASS</li>
+              </ul>
+            </section>
+            <section class="col-md-2">
+              <h4 class="h4">JavaScript</h4>
+              <ul class="list-unstyled list-group">
+                <li>Functional and Object-oriented</li>
+                <li>NodeJS</li>
+                <li>AngularJS</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      <!-- /skills -->
+
       <!-- about -->
-      <section id="about" class="tab-content container-fluid text-xs-center">
+      <section id="about" class="tab-content container text-xs-center">
         <div class="row">
-          <section class="col-xs-12">
-            <h1>You can find me in PDX:</h1>
+          <section class="col-md-4">
+            <img src ="img/profile.jpg" id="profilePic">
+          </section>
+          <section class="col-md-8">
+            <h3 class="h3">You can find me in PDX:</h3>
             <ul class="list-unstyled list-group">
               <li class="list-group-item">bombing down Clinton St on my bike rain or shine! (Mostly rain)</li>
               <li class="list-group-item">Holing up at a coffee shop or Powell's and gorging on science fiction, comics, or graphic novels.</li>
@@ -77,6 +116,36 @@
         </div>
       </section>
       <!-- /about -->
+
+      <!-- contact -->
+        <div class="container" id="contact">
+          <div class="row">
+            <section class="col-md-6" id="contact1">
+              <h3 class="h3">Let's be friends!</h3>
+              <form>
+                <div class="form-group">
+                  <label for="forName"><input type="text" class="form-control" id="formName" placeholder="Name"></label>
+                </div>
+                <div class="form-group">
+                  <label for="formEmail"><input type="email" class="form-control" id="formEmail" placeholder="Email"></label>
+                </div>
+                <div class="form-group">
+                  <label for="formSubject"><input type="text" class="form-control" id="formSubject" placeholder="Subject"></label>
+                </div>
+                <div class="form-group">
+                  <label for="formMessage"><textarea type="" class="form-control" id="formMessage" placeholder="Message"></textarea></label>
+                </div>
+                <div class="form-group">
+                  <label for="formButton"><button type="button" class="btn btn-default">All systems go, Cap'n!</button>
+                </div>
+              </form>
+            </section>
+            <section class="col-md-6">
+              <p>Need a front-end developer? Wanting to start a side project? Have some questions about my projects? Just want to talk code? Please don't hesitate to contact me! Rarely am I too busy for some good 'ol programming.</p>
+            </section>
+          </div>
+        </div>
+      <!-- contact -->
 
       <!-- footer -->
       <section class="container-fluid text-xs-center" id="footer">
