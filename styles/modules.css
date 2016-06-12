@@ -2,9 +2,12 @@
 article {
   padding: 2rem;
 }
-
-.display-4 {
-  margin-top: 25%;
+nav .btn {
+  display: block;
+}
+nav a:hover {
+  text-decoration: none;
+  color: #fff;
 }
 #projects {
   border-bottom: 2px solid #DBB93F;
@@ -67,21 +70,27 @@ article {
     margin-left: 10%;
   }
   nav ul {
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
+    left: 20%;
+    z-index: 1;
+    border-bottom: 2px solid black;
+    margin: auto;
   }
   a {
     text-decoration: none;
     color: #373a3c;
   }
-  nav a:hover {
-    color: #fff;
-    text-decoration: none;
-  }
   nav li {
     display: inline;
     padding: 5%;
   }
-
+  nav .btn {
+    display: inline-block;
+  }
+  nav .btn:hover {
+    color: #DBB93F;
+    text-decoration: none;
+    border-color: #dbb93f;
+  }
 }
