@@ -5,16 +5,33 @@
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Arielle | Web Developer</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" src="css/normalize.css"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" src="vendor/styles/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/layout.css">
+    <link rel="stylesheet" type="text/css" href="styles/state.css">
+    <link rel="stylesheet" type="text/css" href="styles/theme.css">
+    <link rel="stylesheet" type="text/css" href="styles/modules.css">
+    <!-- projects template -->
+    <script id="project-template" type="text/x-handlebars-template">
+      <article class="clearfix col-lg-4 text-xs-center" data-category="{{category}}" data-author="{{author}}">
+        <header>
+          <address><a href="{{projectURL}}"><h1>{{title}}</h1></a></address>
+          <div class="byline">
+            published <time pubdate datetime="{{publishedOn}}">{{publishStatus}}</time>
+          </div>
+        </header>
+        <section class="project-body">{{{body}}}</section>
+        <a href="#" class="read-on">Read on &rarr;</a>
+      </article>
+    </script>
+    <!-- /projects template -->
   </head>
+
   <body>
     <!-- nav menu -->
     <nav>
       <ul class="nav">
-        <a class="nav-link" href="#projects"><li data-content="projects" class=".tab nav-item">PORTFOLIO</li></a>
+        <li data-content="projects" class=".tab nav-item"><a class="nav-link" href="#projects">PORTFOLIO</a></li>
         <li data-content="about" class=".tab nav-item"><a class="nav-link" href="#">ABOUT</a></li>
       </ul>
     </nav>
@@ -30,69 +47,130 @@
             <!-- <img id="profilePic" src="img/profilepic.jpg"> -->
             <h1 class="display-4">
               Arielle Foldoe
-              <small class="text-muted">Front End Developer</small>
+            <small class="text-muted">Front End Developer</small>
             </h1>
+            <i class="fa fa-bicycle"><span></span></i>
             <a href="#projects" class="btn btn--s">View Portfolio</a>
           </header>
         </div>
         <!-- /header -->
       </section>
+      <!-- projects section -->
 
-      <!-- projects -->
-      <div class="container text-xs-center">
-        <div class="row">
-          <section id="projects" class="tab-content">
-            <article class="template" data-category="">
-              <header>
-                <address><a href=""><h1>Title</h1></a></address>
-                <div class="byline">
-                  By <address><a href="">Arielle</a></address>
-                  published <time pubdate datetime="2000-01-01">Publish Time</time>
-                </div>
-              </header>
-              <section class="project-body"></section>
-              <a href="#" class="read-on">Read on &rarr;</a>
-            </article>
-          </section>
-        </div>
-      </div>
-        <!-- /projects -->
-
-        <!-- about -->
-
-        <section id="about" class="tab-content container-fluid text-xs-center">
+      <section id="projects" class="tab-content container">
+        <div class="container text-xs-center">
           <div class="row">
-            <section class="col-xs-12">
-              <h3>You can find me in PDX:</h1>
+          </div>
+        </div>
+      </section>
+      <!-- /projects section -->
+
+      <!-- skills -->
+        <div class="container" id="skills">
+          <div class="row">
+            <section class="col-md-6" id="skills1">
+              <h3 class="h3">Aaniin! (Hello!)</h3>
+              <p>I'm Arielle: a front-end developer fascinated with JavaScript, awed by CSS, and curious about everything else to learn. Dedication to creating web applications scaled to grow with excellent base structure, a deep love of logical puzzles, attention to detail, and a thirst for knowledge fuels my quest to remain up-to-date on modern engineering technologies and approaches.</p>
+            </section>
+            <section class="col-md-2">
+              <h4 class="h4">HTML</h4>
               <ul class="list-unstyled list-group">
-                <li class="list-group-item">bombing down Clinton St on my bike rain or shine! (Mostly rain)</li>
-                <li class="list-group-item">Holing up at a coffee shop or Powell's and gorging on science fiction, comics, or graphic novels.</li>
-                <li class="list-group-item">Swinging by Ground Kontrol to play Ms Pacman after a hard day's work.</li>
+                <li>HTML5</li>
+                <li>Handlebars</li>
+              </ul>
+            </section>
+            <section class="col-md-2">
+              <h4 class="h4">CSS</h4>
+              <ul class="list-unstyled list-group">
+                <li>Responsive Design</li>
+                <li>Bootstrap</li>
+                <li>SASS</li>
+              </ul>
+            </section>
+            <section class="col-md-2">
+              <h4 class="h4">JavaScript</h4>
+              <ul class="list-unstyled list-group">
+                <li>Functional and Object-oriented</li>
+                <li>NodeJS</li>
+                <li>AngularJS</li>
               </ul>
             </section>
           </div>
-        </section>
-        <!-- /about -->
+        </div>
+      <!-- /skills -->
 
-        <!-- footer -->
-        <section class="container-fluid text-xs-center">
+      <!-- about -->
+      <section id="about" class="tab-content container text-xs-center">
+        <div class="row">
+          <section class="col-md-4">
+            <img src ="img/profile.jpg" id="profilePic">
+          </section>
+          <section class="col-md-8">
+            <h3 class="h3">You can find me in PDX:</h3>
+            <ul class="list-unstyled list-group">
+              <li class="list-group-item">bombing down Clinton St on my bike rain or shine! (Mostly rain)</li>
+              <li class="list-group-item">Holing up at a coffee shop or Powell's and gorging on science fiction, comics, or graphic novels.</li>
+              <li class="list-group-item">Swinging by Ground Kontrol to play Ms Pacman after a hard day's work.</li>
+            </ul>
+          </section>
+        </div>
+      </section>
+      <!-- /about -->
+
+      <!-- contact -->
+        <div class="container" id="contact">
           <div class="row">
-            <footer class="text-center">
-              <a href="https://www.facebook.com/arielle.foldoe"><img src="img/facebook-logo.png" height="20px" alt="Facebook Logo"></a>
-              <a href="https://twitter.com/a_foldoe"><img src="img/twitter-logo.png" height="20px "alt="Twitter Logo"></a>
-              <a href="https://github.com/afoldoe"><img src="img/GitHub_Logo.png" height="20px" alt="GitHub Logo"></a>
-              <p>&copy; 2016 Arielle Foldoe</p>
-            </footer>
+            <section class="col-md-6" id="contact1">
+              <h3 class="h3">Let's be friends!</h3>
+              <form>
+                <div class="form-group">
+                  <label for="forName"><input type="text" class="form-control" id="formName" placeholder="Name"></label>
+                </div>
+                <div class="form-group">
+                  <label for="formEmail"><input type="email" class="form-control" id="formEmail" placeholder="Email"></label>
+                </div>
+                <div class="form-group">
+                  <label for="formSubject"><input type="text" class="form-control" id="formSubject" placeholder="Subject"></label>
+                </div>
+                <div class="form-group">
+                  <label for="formMessage"><textarea type="" class="form-control" id="formMessage" placeholder="Message"></textarea></label>
+                </div>
+                <div class="form-group">
+                  <label for="formButton"><button type="button" class="btn btn-default">All systems go, Cap'n!</button>
+                </div>
+              </form>
+            </section>
+            <section class="col-md-6">
+              <p>Need a front-end developer? Wanting to start a side project? Have some questions about my projects? Just want to talk code? Please don't hesitate to contact me! Rarely am I too busy for some good 'ol programming.</p>
+            </section>
           </div>
-        </section>
-        <!-- /footer -->
-      </div>
+        </div>
+      <!-- contact -->
+
+      <!-- footer -->
+      <section class="container-fluid text-xs-center" id="footer">
+        <div class="row">
+          <footer>
+            <a href="https://www.facebook.com/arielle.foldoe"><img src="img/facebook-logo.png" height="20px" alt="Facebook Logo"></a>
+            <a href="https://twitter.com/a_foldoe"><img src="img/twitter-logo.png" height="20px "alt="Twitter Logo"></a>
+            <a href="https://github.com/afoldoe"><img src="img/GitHub_Logo.png" height="20px" alt="GitHub Logo"></a>
+            <p>&copy; 2016 Arielle Foldoe</p>
+          </footer>
+        </div>
+      </section>
+      <!-- /footer -->
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="eslintrc.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script type="text/javascript" src="vendor/scripts/html5sql.js"></script>
+    <script type="text/javascript" src="scripts/webdb.js"></script>
     <script type="text/javascript" src="scripts/projectView.js"></script>
-    <script type="text/javascript" src="scripts/projects.js"></script>
     <script type="text/javascript" src="scripts/script.js"></script>
+    <script>
+     Project.createTable();
+     Project.fetchAll(projectView.initIndexPage);
+    </script>
   </body>
 </html>
