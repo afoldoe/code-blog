@@ -27,6 +27,20 @@
       </article>
     </script>
     <!-- /projects template -->
+
+    <!-- repos template -->
+    <script id="repo-template" type="text/x-handlebars-template">
+    <li>
+      <a href="{{html_url}}" target="_blank"><h2>{{name}}</h2></a>
+      <p class="icon-power">{{description}}</p>
+      <p class="icon-plus"> {{created_at}}</p>
+      <p class="icon-happy"></p>
+      {{#if watchers_count}}
+        <p>{{watchers_count}} watching this repo</p>
+      {{/if}}
+    </li>
+  </script>
+    <!-- /repos template -->
   </head>
 
   <body>
