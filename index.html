@@ -6,6 +6,8 @@
    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Arielle | Web Developer</title>
     <link rel="stylesheet" type="text/css" src="vendor/styles/normalize.css">
+    <link rel="stylesheet" type="text/css" src="vendor/styles/animate.css">
+    <link rel="stylesheet" type="text/css" src="vendor/styles/icons.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="styles/layout.css">
     <link rel="stylesheet" type="text/css" href="styles/state.css">
@@ -13,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="styles/modules.css">
     <!-- projects template -->
     <script id="project-template" type="text/x-handlebars-template">
-      <article class="clearfix col-lg-4 text-xs-center" data-category="{{category}}" data-author="{{author}}">
+      <article class="clearfix col-lg-6 text-xs-center" data-category="{{category}}" data-author="{{author}}">
         <header>
           <address><a href="{{projectURL}}"><h1>{{title}}</h1></a></address>
           <div class="byline">
@@ -31,22 +33,23 @@
 
     <!-- <div class="site-wrap"> -->
       <!-- header -->
-      <section class="container-fluid text-xs-center" id="header">
+      <section class="container-fluid text-xs-center animated fadeIn" id="header">
         <div class="row">
           <header>
             <!-- nav menu -->
             <nav class="container-fluid">
-              <div clas="row">
+              <div clas="row text-xs-center">
                 <!-- <button type="button" class="btn">
                   <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
                 </button> -->
-                <ul class="list-unstyled list-group">
-                  <li class="btn btn-"><a href="/">HOME</a></li>
-                  <li class="btn btn-"><a href="/projects">PORTFOLIO</a></li>
-                  <li class="btn"><a href="/skills">SKILLS</a></li>
-                  <li class="btn"><a href="/about">ABOUT</a></li>
-                  <li class="btn"><a href="/contact">CONTACT</a></li>
+                <ul class="list-unstyled">
+                  <a href="/"><li class="btn btn-"><strong>HOME</strong></li></a>
+                  <a href="/projects"><li class="btn btn-"><strong>PORTFOLIO</strong></li></a>
+                  <a href="/skills"><li class="btn"><strong>SKILLS</strong></li></a>
+                  <a href="/about"><li class="btn"><strong>ABOUT</strong></li></a>
+                  <a href="/contact"><li class="btn"><strong>CONTACT</strong></li></a>
                 </ul>
+                <div class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></div>
               </div>
             </nav>
             <!-- nav menu -->
@@ -63,21 +66,12 @@
 
       <!-- main -->
       <main>
-      <!-- projects section -->
-      <section id="projects" class="tab-content container">
-        <div class="container text-xs-center">
-          <div class="row">
-          </div>
-        </div>
-      </section>
-      <!-- /projects section -->
-
       <!-- skills -->
       <section class="container" id="skills">
         <div class="row">
           <section class="col-md-6 text-xs-center" id="skills1">
             <h3 class="h3">Aaniin! (Hello!)</h3>
-            <p>I'm Arielle: a front-end developer fascinated with JavaScript, awed by CSS, and curious about everything else to learn. Dedication to creating web applications scaled to grow with excellent base structure, a deep love of logical puzzles, attention to detail, and a thirst for knowledge fuels my quest to remain up-to-date on modern engineering technologies and approaches.</p>
+            <p>I'm Arielle: a front-end developer fascinated with JavaScript, awed by CSS, and curious about everything else there is to learn. Dedication to creating web applications scaled to grow with excellent base structure, a deep love of logical puzzles, attention to detail, and a thirst for knowledge fuels my quest to remain up-to-date on modern engineering technologies and approaches.</p>
           </section>
           <section class="col-md-2 text-xs-center">
             <h4 class=" h4">HTML</h4>
@@ -106,6 +100,15 @@
       </section>
       <!-- /skills -->
 
+      <!-- projects section -->
+      <section id="projects" class="tab-content container">
+        <div class="container text-xs-center">
+          <div class="row">
+          </div>
+        </div>
+      </section>
+      <!-- /projects section -->
+
       <!-- about -->
       <section id="about" class="tab-content container text-xs-center">
         <div class="row">
@@ -124,10 +127,11 @@
       </section>
       <!-- /about -->
 
+
       <!-- contact -->
       <section class="container" id="contact">
         <div class="row">
-          <section class="col-md-6" id="contact1">
+          <section class="col-md-6 text-xs-center" id="contact1">
             <h3 class="h3">Let's be friends!</h3>
             <form>
               <div class="form-group">
@@ -143,7 +147,7 @@
                 <label for="formMessage"><textarea type="" class="form-control" id="formMessage" placeholder="Message"></textarea></label>
               </div>
               <div class="form-group">
-                <label for="formButton"><button type="button" class="btn btn-default">All systems go, Cap'n!</button>
+                <label for="formButton"><button type="button" class="btn btn-default">Warp 9, Engage!</button>
               </div>
             </form>
           </section>
@@ -173,6 +177,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script type="text/javascript" src="vendor/scripts/page.js"></script>
+    <script type="text/javascript" src="vendor/scripts/server.js"></script>
     <script type="text/javascript" src="vendor/scripts/html5sql.js"></script>
     <script type="text/javascript" src="scripts/webdb.js"></script>
     <script type="text/javascript" src="scripts/script.js"></script>
