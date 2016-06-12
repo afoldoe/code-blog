@@ -7,14 +7,18 @@ article {
   margin-top: 25%;
 }
 #projects {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #DBB93F;
   padding-bottom: 5%;
   padding-top: 5%;
+}
+#projects a:hover {
+  color: #DBB93F;
+  text-decoration: none;
 }
 #about {
   padding-top: 5%;
   padding-bottom: 5%;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #DBB93F;
 }
 #about section ul {
   padding: 5%;
@@ -23,7 +27,7 @@ article {
   margin-bottom: 10%;
 }
 #skills {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #DBB93F;
   padding-bottom: 5%;
   padding-top: 5%;
 }
@@ -48,17 +52,36 @@ article {
 #contact1 h3 {
   padding-bottom: 5%;
 }
+
 /* Media Queries*/
 @media only screen and (min-width : 768px) and (max-width : 1400px) {
   #skills1 {
-    border-right: 2px solid black;
+    border-right: 2px solid #DBB93F;
   }
   #contact1 {
-    border-right: 2px solid black;
+    border-right: 2px solid #DBB93F;
   }
   #contact2 {
     width: 30%;
     margin-top: 10%;
     margin-left: 10%;
   }
+  nav ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  a {
+    text-decoration: none;
+    color: #373a3c;
+  }
+  nav a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  nav li {
+    display: inline;
+    padding: 5%;
+  }
+
 }
