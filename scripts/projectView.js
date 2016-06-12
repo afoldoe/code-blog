@@ -27,12 +27,13 @@
 
   projectView.initIndexPage = function() {
     //appends each project to the page
+    $('#projects').empty();
     Project.all.forEach(function(a){
       $('#projects').append(a.toHtml());
     });
     // projectView.handleMainNav();
     projectView.setTeasers();
-    
+
   };
   module.projectView = projectView;
 })(window);
