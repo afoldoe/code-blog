@@ -14,17 +14,24 @@ article {
 #about {
   padding-top: 5%;
   padding-bottom: 5%;
-  margin-top: 2rem;
   border-bottom: 2px solid black;
+}
+#about section ul {
+  padding: 5%;
+}
+#about img {
+  margin-bottom: 10%;
 }
 #skills {
   border-bottom: 2px solid black;
-  margin-top: 5%;
   padding-bottom: 5%;
   padding-top: 5%;
 }
-#skills1 {
-  border-right: 2px solid black;
+#skills section h3 {
+  margin-bottom: 5%;
+}
+#skills section p {
+  margin-bottom: 10%;
 }
 #profilePic {
   width: 80%;
@@ -32,12 +39,26 @@ article {
   border-radius: 15%;
 }
 #contact {
-
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 #contact1 {
-  border-right: 2px solid black;
+  padding-left: 10%;
+}
+#contact1 h3 {
+  padding-bottom: 5%;
 }
 /* Media Queries*/
 @media only screen and (min-width : 768px) and (max-width : 1400px) {
-
+  #skills1 {
+    border-right: 2px solid black;
+  }
+  #contact1 {
+    border-right: 2px solid black;
+  }
+  #contact2 {
+    width: 30%;
+    margin-top: 10%;
+    margin-left: 10%;
+  }
 }
