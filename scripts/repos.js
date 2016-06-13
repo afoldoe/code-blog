@@ -3,21 +3,32 @@
 
   repos.all = [];
 
-  repos.requestRepos = function() {
+  repos.requestRepos = function(callback) {
     $.ajax({
-      url: 'https://api.github.com/user/repos',
+      url: 'https://api.github.com/users/afoldoe/repos',
       type: 'GET',
       headers: {
-        'Authorizaton' : 'token' + githubToken
+        'Authorization' : 'token ' + githubToken
       }
     })
     .done(function(data, message, xhr) {
       repos.all = data;
+      console.log(data);
     })
     .fail(function(data, message, xhr) {
-      console.log('noooooooope!');
+      console.log(data);
     })
     .then(callback);
+  };
+
+  repos.sorted = function() {
+    repos.all.map(function(repo) {
+      // var date = new Date() - ;
+      var projectDate = new Date() - Date.parse(repo.updated_at);
+      console.log(projectDate);
+      
+
+    });
   };
 
   repos.with = function(attr) {

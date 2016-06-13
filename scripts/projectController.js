@@ -1,8 +1,8 @@
 (function(module) {
   var projectController = {};
 
+  Project.createTable();
   projectController.index = function() {
-    Project.createTable();
     Project.fetchAll(projectView.initIndexPage);
     $('#projects').show().siblings().hide();
   };
