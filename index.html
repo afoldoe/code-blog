@@ -27,6 +27,20 @@
       </article>
     </script>
     <!-- /projects template -->
+
+    <!-- repos template -->
+    <script id="repo-template" type="text/x-handlebars-template">
+    <li>
+      <a href="{{html_url}}" target="_blank"><h2>{{name}}</h2></a>
+      <p class="icon-power">{{description}}</p>
+      <p class="icon-plus"> {{created_at}}</p>
+      <p class="icon-happy"></p>
+      {{#if watchers_count}}
+        <p>{{watchers_count}} watching this repo</p>
+      {{/if}}
+    </li>
+  </script>
+    <!-- /repos template -->
   </head>
 
   <body>
@@ -66,67 +80,75 @@
 
       <!-- main -->
       <main>
-      <!-- skills -->
-      <section class="container" id="skills">
-        <div class="row">
-          <section class="col-md-6 text-xs-center" id="skills1">
-            <h3 class="h3">Aaniin! (Hello!)</h3>
-            <p>I'm Arielle: a front-end developer fascinated with JavaScript, awed by CSS, and curious about everything else there is to learn. Dedication to creating web applications scaled to grow with excellent base structure, a deep love of logical puzzles, attention to detail, and a thirst for knowledge fuels my quest to remain up-to-date on modern engineering technologies and approaches.</p>
-          </section>
-          <section class="col-md-2 text-xs-center">
-            <h4 class=" h4">HTML</h4>
-            <ul class="list-unstyled list-group">
-              <li>HTML5</li>
-              <li>Handlebars</li>
-            </ul>
-          </section>
-          <section class="col-md-2 text-xs-center">
-            <h4 class="h4">CSS</h4>
-            <ul class="list-unstyled list-group">
-              <li>Responsive Design</li>
-              <li>Bootstrap</li>
-              <li>SASS</li>
-            </ul>
-          </section>
-          <section class="col-md-2 text-xs-center">
-            <h4 class="h4">JavaScript</h4>
-            <ul class="list-unstyled list-group">
-              <li>Functional and Object-oriented</li>
-              <li>NodeJS</li>
-              <li>AngularJS</li>
-            </ul>
-          </section>
-        </div>
-      </section>
-      <!-- /skills -->
-
-      <!-- projects section -->
-      <section id="projects" class="tab-content container">
-        <div class="container text-xs-center">
+        <!-- about -->
+        <section id="about" class="tab-content container text-xs-center">
           <div class="row">
+            <section class="col-md-4">
+              <img src ="img/profile.jpg" id="profilePic">
+            </section>
+            <section class="col-md-8">
+              <h3 class="h3">A Wild ARI appeared!</h3>
+              <ul class="list-unstyled list-group">
+                <li class="list-group-item">Bombing down Clinton St on my bike rain or shine! (Mostly rain)</li>
+                <li class="list-group-item">Holing up at a coffee shop or Powell's and gorging on science fiction, comics, or graphic novels.</li>
+                <li class="list-group-item">Swinging by Ground Kontrol to play Ms Pacman an drink a brewski after a hard day's work.</li>
+              </ul>
+            </section>
           </div>
-        </div>
-      </section>
-      <!-- /projects section -->
+        </section>
+        <!-- /about -->
+        <!-- skills -->
+        <section class="container" id="skills">
+          <div class="row">
+            <section class="col-md-6 text-xs-center" id="skills1">
+              <h3 class="h3">Aaniin! (Hello!)</h3>
+              <p>I'm Arielle: a front-end developer fascinated with JavaScript, awed by CSS, and curious about everything else there is to learn. Dedication to creating web applications scaled to grow with excellent base structure, a deep love of logical puzzles, attention to detail, and a thirst for knowledge fuels my quest to remain up-to-date on modern engineering technologies and approaches.</p>
+            </section>
+            <section class="col-md-2 text-xs-center">
+              <h4 class=" h4">HTML</h4>
+              <ul class="list-unstyled list-group">
+                <li>HTML5</li>
+                <li>Handlebars</li>
+              </ul>
+            </section>
+            <section class="col-md-2 text-xs-center">
+              <h4 class="h4">CSS</h4>
+              <ul class="list-unstyled list-group">
+                <li>Responsive Design</li>
+                <li>Bootstrap</li>
+                <li>SASS</li>
+              </ul>
+            </section>
+            <section class="col-md-2 text-xs-center">
+              <h4 class="h4">JavaScript</h4>
+              <ul class="list-unstyled list-group">
+                <li>Functional and Object-oriented</li>
+                <li>NodeJS</li>
+                <li>AngularJS</li>
+              </ul>
+            </section>
+          </div>
+        </section>
+        <!-- /skills -->
 
-      <!-- about -->
-      <section id="about" class="tab-content container text-xs-center">
-        <div class="row">
-          <section class="col-md-4">
-            <img src ="img/profile.jpg" id="profilePic">
-          </section>
-          <section class="col-md-8">
-            <h3 class="h3">A Wild ARI appeared!</h3>
-            <ul class="list-unstyled list-group">
-              <li class="list-group-item">Bombing down Clinton St on my bike rain or shine! (Mostly rain)</li>
-              <li class="list-group-item">Holing up at a coffee shop or Powell's and gorging on science fiction, comics, or graphic novels.</li>
-              <li class="list-group-item">Swinging by Ground Kontrol to play Ms Pacman an drink a brewski after a hard day's work.</li>
-            </ul>
-          </section>
-        </div>
-      </section>
-      <!-- /about -->
+        <!-- projects section -->
+        <section id="projects" class="tab-content container">
+          <div class="container text-xs-center">
+            <div class="row">
+            </div>
+          </div>
+        </section>
+        <!-- /projects section -->
 
+        <!-- repos section -->
+        <section id="repos" class="tab-content container">
+          <div class="container text-xs-center">
+            <div class="row">
+              <ul></ul>
+            </div>
+          </div>
+        </section>
+        <!-- /repos section -->
 
       <!-- contact -->
       <section class="container" id="contact">
@@ -176,20 +198,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script type="text/javascript" src="scripts/githubToken.js"></script>
     <script type="text/javascript" src="vendor/scripts/page.js"></script>
-    <script type="text/javascript" src="vendor/scripts/server.js"></script>
+    <script type="text/javascript" src="vendor/scripts/moment.js"></script>
+    <script type="text/javascript" src="server.js"></script>
     <script type="text/javascript" src="vendor/scripts/html5sql.js"></script>
     <script type="text/javascript" src="scripts/webdb.js"></script>
     <script type="text/javascript" src="scripts/script.js"></script>
     <script type="text/javascript" src="scripts/projectView.js"></script>
+    <script type="text/javascript" src="scripts/repoView.js"></script>
+    <script type="text/javascript" src="scripts/repos.js"></script>
+    <script type="text/javascript" src="scripts/repoController.js"></script>
+    <script type="text/javascript" src="scripts/homeController.js"></script>
     <script type="text/javascript" src="scripts/projectController.js"></script>
     <script type="text/javascript" src="scripts/skillsController.js"></script>
     <script type="text/javascript" src="scripts/contactController.js"></script>
     <script type="text/javascript" src="scripts/aboutController.js"></script>
     <script type="text/javascript" src="scripts/routes.js"></script>
-    <script>
-     Project.createTable();
-     Project.fetchAll(projectView.initIndexPage);
-    </script>
   </body>
 </html>
