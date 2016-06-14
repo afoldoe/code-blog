@@ -1,18 +1,24 @@
-
+header {
+  margin-top: 10%;
+}
 article {
   padding: 2rem;
 }
 nav .btn {
   display: block;
+  border: none;
+}
+nav .btn:hover {
+  color: #fff;
+  text-decoration: none;
+  border: none;
 }
 nav a:hover {
-  text-decoration: none;
-  color: #fff;
+  border-bottom: 1px #fff solid;
+  transition: border .5s;
 }
 #projects {
-  border-bottom: 2px solid #DBB93F;
   padding-bottom: 5%;
-  padding-top: 5%;
 }
 #projects a:hover {
   color: #DBB93F;
@@ -43,11 +49,13 @@ nav a:hover {
 #profilePic {
   width: 80%;
   height: 50%;
-  border-radius: 15%;
+  border-radius: 20%;
+  border: 15px solid #DBB93F;
 }
 #contact {
   padding-top: 5%;
   padding-bottom: 5%;
+  border-bottom: 10px solid #DBB93F;
 }
 
 #contact1 h3 {
@@ -56,24 +64,14 @@ nav a:hover {
 
 /* Media Queries*/
 @media only screen and (min-width : 768px) and (max-width : 1400px) {
-  #skills1 {
-    border-right: 2px solid #DBB93F;
-  }
-  #contact1 {
-    border-right: 2px solid #DBB93F;
-  }
-  #contact2 {
-    width: 30%;
-    margin-top: 10%;
-    margin-left: 10%;
-  }
   nav ul {
     position: fixed;
     top: 0;
-    left: 20%;
+    left: 0;
     z-index: 1;
-    border-bottom: 2px solid black;
     margin: auto;
+    background-color: #DBB93F;
+    width: 100%;
   }
   a {
     text-decoration: none;
@@ -85,10 +83,39 @@ nav a:hover {
   }
   nav .btn {
     display: inline-block;
+    color: #373a3c;
   }
-  nav .btn:hover {
-    color: #DBB93F;
-    text-decoration: none;
-    border-color: #dbb93f;
+  .scrollDown {
+    opacity: 0;
+    transition: all 2s ease;
   }
+  .scrollUp {
+    opacity: 1;
+    transition: all 2s ease;
+  }
+  #about {
+      border-bottom: 5px solid #DBB93F;
+  }
+  #projects {
+      border-bottom: 5px solid #DBB93F;
+  }
+  #skills {
+    border-bottom: 5px solid #DBB93F;
+  }
+  #skills1 {
+    border-right: 2px solid #DBB93F;
+  }
+  #contact {
+    border-bottom: 5px solid #DBB93F;
+  }
+  #contact1 {
+    border-right: 2px solid #DBB93F;
+  }
+  #contact2 {
+    width: 30%;
+    margin-top: 10%;
+    margin-left: 10%;
+  }
+
+
 }

@@ -1,17 +1,6 @@
 (function(module) {
   var projectView = {};
 
-  //when tabs are selected in the nav menu, on the section pertanining to that tab is shown
-  // projectView.handleMainNav = function() {
-  //   $('.nav').on('click', 'li', function(e) {//click event on list items in the nav
-  //     e.preventDefault();//prevents click event from firing
-  //     var tab = $(this).attr('data-content'); //gets the attr value from the li clicked on
-  //     $('.tab-content').hide();//hides the content
-  //     $('section#' + tab).show();//passes in the li attr value into a ID that matches to show that section
-  //   });
-  // };
-
-
   projectView.setTeasers = function() {
     $('.project-body *:nth-of-type(n+1)').hide(); // Hide elements beyond the first in any artcile body.
     //event hander that shows more article info once clicked
@@ -22,8 +11,6 @@
 
     });
   };
-
-
 
   projectView.initIndexPage = function() {
     //appends each project to the page
