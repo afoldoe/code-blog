@@ -6,7 +6,7 @@
    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Arielle | Web Developer</title>
     <link rel="stylesheet" type="text/css" src="vendor/styles/normalize.css">
-    <link rel="stylesheet" type="text/css" src="vendor/styles/icons.css">
+    <link rel="stylesheet" type="text/css" src="vendor/styles/animsition.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="styles/layout.css">
     <link rel="stylesheet" type="text/css" href="styles/state.css">
@@ -17,6 +17,7 @@
       <article class="clearfix col-lg-6 text-xs-center" data-category="{{category}}" data-author="{{author}}">
         <header>
           <address><a href="{{projectURL}}"><h1>{{title}}</h1></a></address>
+          <img src="{{imgURL}}">
           <div class="byline">
             published <time pubdate datetime="{{publishedOn}}">{{publishStatus}}</time>
           </div>
@@ -26,25 +27,10 @@
       </article>
     </script>
     <!-- /projects template -->
-
-    <!-- repos template -->
-    <script id="repo-template" type="text/x-handlebars-template">
-    <li>
-      <a href="{{html_url}}" target="_blank"><h2>{{name}}</h2></a>
-      <p class="icon-power">{{description}}</p>
-      <p class="icon-plus"> {{created_at}}</p>
-      <p class="icon-happy"></p>
-      {{#if watchers_count}}
-        <p>{{watchers_count}} watching this repo</p>
-      {{/if}}
-    </li>
-  </script>
-    <!-- /repos template -->
   </head>
 
   <body>
     <!-- start page -->
-
       <!-- header -->
 
         <section class="container-fluid text-xs-center" id="header">
@@ -62,6 +48,7 @@
       <!-- /header -->
 
       <!-- nav menu -->
+
       <nav class="container-fluid">
         <div class="row text-xs-center">
           <ul class="list-unstyled">
@@ -71,7 +58,6 @@
             <a href="/about"><li class="btn"><strong>ABOUT</strong></li></a>
             <a href="/contact"><li class="btn"><strong>CONTACT</strong></li></a>
           </ul>
-          <button class="glyphicon glyphicon-menu-hamburger"></button>
         </div>
       </nav>
       <!-- nav menu -->
@@ -146,38 +132,26 @@
 
         <!-- /projects section -->
 
-        <!-- repos section -->
-
-          <section id="repos" class="tab-content container">
-            <div class="container text-xs-center">
-              <div class="row">
-                <ul></ul>
-              </div>
-            </div>
-          </section>
-
-        <!-- /repos section -->
-
       <!-- contact -->
         <section class="container" id="contact">
           <div class="row">
             <section class="col-md-6 text-xs-center" id="contact1">
               <h3 class="h3">Let's be friends!</h3>
-              <form>
+              <form name="emailForm" method="post" action="send_form_email.php">
                 <div class="form-group">
-                  <label for="forName"><input type="text" class="form-control" id="formName" placeholder="Name"></label>
+                  <label for="forName"><input name="formName" type="text" class="form-control" id="formName" placeholder="Name"></label>
                 </div>
                 <div class="form-group">
-                  <label for="formEmail"><input type="email" class="form-control" id="formEmail" placeholder="Email"></label>
+                  <label for="formEmail"><input name="formEmail" type="email" class="form-control" id="formEmail" placeholder="Email"></label>
                 </div>
                 <div class="form-group">
-                  <label for="formSubject"><input type="text" class="form-control" id="formSubject" placeholder="Subject"></label>
+                  <label for="formSubject"><input name="formSubject" type="text" class="form-control" id="formSubject" placeholder="Subject"></label>
                 </div>
                 <div class="form-group">
-                  <label for="formMessage"><textarea type="" class="form-control" id="formMessage" placeholder="Message"></textarea></label>
+                  <label for="formMessage"><textarea name="formMessage" type="" class="form-control" id="formMessage" placeholder="Message"></textarea></label>
                 </div>
                 <div class="form-group">
-                  <label for="formButton"><button type="button" class="btn btn-default">Warp 9, Engage!</button>
+                  <label for="formButton"><button type="submit" class="btn btn-default">Warp 9, Engage!</button>
                 </div>
               </form>
             </section>
@@ -202,12 +176,12 @@
         </div>
       </section>
       <!-- /footer -->
-
     <!-- /end page -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script type="text/javascript" src="vendor/scripts/animsition.min.js"></script>
     <script type="text/javascript" src="scripts/githubToken.js"></script>
     <script type="text/javascript" src="vendor/scripts/page.js"></script>
     <script type="text/javascript" src="vendor/scripts/moment.js"></script>
@@ -216,14 +190,14 @@
     <script type="text/javascript" src="scripts/scroll.js"></script>
     <script type="text/javascript" src="scripts/script.js"></script>
     <script type="text/javascript" src="scripts/projectView.js"></script>
-    <script type="text/javascript" src="scripts/repoView.js"></script>
-    <script type="text/javascript" src="scripts/repos.js"></script>
-    <script type="text/javascript" src="scripts/repoController.js"></script>
     <script type="text/javascript" src="scripts/homeController.js"></script>
     <script type="text/javascript" src="scripts/projectController.js"></script>
     <script type="text/javascript" src="scripts/skillsController.js"></script>
     <script type="text/javascript" src="scripts/contactController.js"></script>
     <script type="text/javascript" src="scripts/aboutController.js"></script>
     <script type="text/javascript" src="scripts/routes.js"></script>
+    <script>
+      console.log(app);
+    </script>
   </body>
 </html>

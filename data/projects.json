@@ -1,19 +1,20 @@
  [
    {
      "title" : "Byckleta",
-     "author": "Arielle",
-     "projectURL": "",
+     "author": "Arielle and Sean",
+     "projectURL": "https://github.com/seanloughran/Bcykleta",
      "publishedOn": "2016-05-1",
      "category": "bikes",
-     "body": "<p>The first website I finished outside a tutorial! My classmate, Sean, and I created a sample website for a nonprofit bike shop. I took on the styling for the page, including implementing a form template we found appealing. The fuctonality pertaining to the bike shop section was also my work. I created a simple pop up div to show more detailed information on the bikes for sale. As most nonprofit bike shops in Portland accept bike donations, I included a form to collect user input on the bike and its details they would like to donate along with their contact informaton.</p>"
+     "body": "<p>The first website I finished outside a tutorial! My classmate Sean and I created a sample website for a nonprofit bike shop. I took on the styling for the page, including implementing a form template we found appealing. The fuctonality pertaining to the bike shop section was also my work. I created a simple pop up div to show more detailed information on the bikes for sale. As most nonprofit bike shops in Portland accept bike donations, I included a form to collect user input on the bike and its details they would like to donate along with their contact informaton.</p>"
    },
    {
-     "title" : "Cookie-Store",
-     "author": "Arielle",
-     "projectURL": "http://seanloughran.github.io/bcykleta/",
-     "publishedOn": "2016-05-1",
-     "category": "cookie",
-     "body": "<p>Blah Blah blah bah </p>"
+     "title" : "Code-aoke",
+     "author": "Arielle, Keegan, Nicholle, and Cass",
+     "projectURL": "http://code-aoke.herokuapp.com/",
+     "publishedOn": "2016-06-25",
+     "category": "karaoke",
+     "body": "<p>We created a SPA named Code-aoke, a Karaoke roulette game. It instructs users to pick a genre, term, or decade to receive a randomized list of songs sorted by popularity. Once the song is selected, users can then choose which YouTube karaoke video they would like to play. I implemented the client-side functionality, about half the styling on the page, and set up a database to store user's favorite songs. </p>",
+     "technologies": "HTML5, Handlebars, JQuery/JavaScript, NodeJS, Skeleton boiletplate, API integration, SQL"
    },
    {
      "title" : "To-Do Application",
@@ -21,6 +22,6 @@
      "projectURL": "",
      "publishedOn": "2016-05-23",
      "category": "todo",
-     "body": "<p>Text yadda yadda yadda yadda yadda yadda yadda yaddayadda yaddayadda yadda </p>"
+     "body": "<p>A simple to do list template I added functionality to in order to work on vanilla JavaScript and DOM manipulation.</p>"
    }
  ]

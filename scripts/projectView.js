@@ -2,23 +2,21 @@
   var projectView = {};
 
   projectView.setTeasers = function() {
-    $('.project-body *:nth-of-type(n+1)').hide(); // Hide elements beyond the first in any artcile body.
+    $('.project-body *:nth-of-type(n+1)').hide();
     //event hander that shows more article info once clicked
     $('.read-on').on('click', function(e) {
-      e.preventDefault();//stops the link firing
-      $(this).hide();//hides the read-on button
+      e.preventDefault();
+      $(this).hide();
       $(this).parent().find('p').show(); //shows the in depth project info
-
     });
   };
 
+  //function to append each project to the page
   projectView.initIndexPage = function() {
-    //appends each project to the page
     $('#projects').empty();
     Project.all.forEach(function(a){
       $('#projects').append(a.toHtml());
     });
-    // projectView.handleMainNav();
     projectView.setTeasers();
 
   };

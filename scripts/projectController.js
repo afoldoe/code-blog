@@ -1,10 +1,12 @@
 (function(module) {
   var projectController = {};
 
-  Project.createTable();
+  //hides all sections except #projects
   projectController.index = function() {
     Project.fetchAll(projectView.initIndexPage);
-    $('#projects').show().siblings().hide();
+    $('#projects').siblings().slideUp(2000, function() {
+      $('#projects').slideDown(2000);
+    });
   };
 
   module.projectController = projectController;

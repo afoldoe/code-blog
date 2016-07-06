@@ -1,3 +1,5 @@
+//defines routes for each li in the nav
+
 page('/projects', projectController.index);
 page('/about', aboutController.index);
 page('/skills', skillsController.index);
@@ -7,7 +9,7 @@ page('/', homeController.index);
   // if(ctx.init) {
     // next();
   // } else {
-//   
+//
 // }
 // });
 page();

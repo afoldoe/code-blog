@@ -10,15 +10,14 @@
 
   //compiles handlerbar template and returns the filled template so we can append to the page
   Project.prototype.toHtml = function() {
-    //handlebars compiles given info into the template
     var templateScript = $('#project-template').html();
     var finalTemplate = Handlebars.compile(templateScript);
     this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);//days since project was created
     this.publishStatus = this.publishedOn ? this.daysAgo + ' days ago' : '(draft)';//tells how many days since the project was published
-    return finalTemplate(this);//returns the template with the project data filled in
+    return finalTemplate(this);
   };
 
-  //goes through the all the 
+  //returns each project in Project.all
   Project.loadAll = function(rows) {
     Project.all = rows.map(function(ele) {
       return new Project(ele);
