@@ -5,27 +5,38 @@ body {
 footer a {
   padding: 1rem;
 }
+header a {
+  margin-top: 4rem;
+}
+.display-4 {
+    margin-top: 20%;
+    color: #fff;
+  }
 #header {
   background-color: #DBB93F;
   width: 100%;
-  height: 60%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   position: relative;
+  text-align: center;
 }
 #footer {
   margin-top: 2.5rem;
+  text-align: center;
 }
 @media only screen and (min-width : 768px) {
 
   #header {
     height: 100%;
-    background-image: url(http://www.travelportland.com/wp-content/uploads/2013/08/Plan_PDXByBike_BikeEastbankEsplanade_courtesy_TravelPortland.jpg);
+    background-image: url("../img/bike.jpg");
     height: 100%;
   }
-
+  header a {
+  margin-top: 2rem;
+}
   .display-4 {
-    margin-top: 25%;
+    margin-top: 45rem;
     color: #fff;
   }
   .text-muted {

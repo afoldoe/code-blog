@@ -1,27 +1,32 @@
  [
    {
-     "title" : "Byckleta",
-     "author": "Arielle and Sean",
-     "projectURL": "https://github.com/seanloughran/Bcykleta",
-     "publishedOn": "2016-05-1",
-     "category": "bikes",
-     "body": "<p>The first website I finished outside a tutorial! My classmate Sean and I created a sample website for a nonprofit bike shop. I took on the styling for the page, including implementing a form template we found appealing. The fuctonality pertaining to the bike shop section was also my work. I created a simple pop up div to show more detailed information on the bikes for sale. As most nonprofit bike shops in Portland accept bike donations, I included a form to collect user input on the bike and its details they would like to donate along with their contact informaton.</p>"
+     "title" : "Clever Job Hunter",
+     "author": "Arielle, Aaron, Geoffrey, Danielle, and Kate",
+     "projectURL": "http://cleverjobhunter.herokuapp.com/",
+     "githubURL": "https://github.com/InsertCleverNameHere",
+     "imgURL": "./img/cleverjobhunter.png",
+     "publishedOn": "9-17-2016",
+     "category": "programming",
+     "body": "<p>Clever job hunter is an application to help users on their job search by organizing company, position, and contact information. It uses a MEAN (Mongoose/MongoDB, Express, Angular 1.5, and Node) stack. Material Design and SCSS style the UI, and Webpack bundles the front end and.</>"
+   },
+   {
+     "title" : "No-Spoilers",
+     "author": "Arielle, Aaron, and Geoffrey",
+     "projectURL": "https://no-spoilers.herokuapp.com/",
+     "githubURL": "https://github.com/No-Spoilers/No-Spoilers",
+     "imgURL": "./img/no-spoilers.png",
+     "publishedOn": "7-10-16",
+     "category": "programming",
+     "body": "<p>No Spoilers is an application that allows users to add TV show information from a database to their personal account, but only shows the detailed episode information a user has explicitly approved. It uses a Node.js back-end that utilizes a RESTful Express API and  Mongoose/MongoDB for database functionality; in the front end, a single page architecture was implemented using JavaScript/jQuery, Handlebars, Skeleton, and CSS.</p>"
    },
    {
      "title" : "Code-aoke",
      "author": "Arielle, Keegan, Nicholle, and Cass",
      "projectURL": "http://code-aoke.herokuapp.com/",
-     "publishedOn": "2016-06-25",
-     "category": "karaoke",
-     "body": "<p>We created a SPA named Code-aoke, a Karaoke roulette game. It instructs users to pick a genre, term, or decade to receive a randomized list of songs sorted by popularity. Once the song is selected, users can then choose which YouTube karaoke video they would like to play. I implemented the client-side functionality, about half the styling on the page, and set up a database to store user's favorite songs. </p>",
-     "technologies": "HTML5, Handlebars, JQuery/JavaScript, NodeJS, Skeleton boiletplate, API integration, SQL"
-   },
-   {
-     "title" : "To-Do Application",
-     "author": "Arielle",
-     "projectURL": "",
-     "publishedOn": "2016-05-23",
-     "category": "todo",
-     "body": "<p>A simple to do list template I added functionality to in order to work on vanilla JavaScript and DOM manipulation.</p>"
+     "githubURL": "https://github.com/afoldoe/code-aoke/",
+     "imgURL": "./img/code-aoke.png",
+     "publishedOn": "5-25-2016",
+     "category": "programming",
+     "body": "<p>A karaoke roulette app where users can select a genre, decade, or term and receive a randomized list of the most popular songs associated with the selection. It was a single page application built with a back-end consisting of a  Node.js server and Express routing plus a front-end using JavaScript/jQuery, Handlebars, Skeleton, and CSS.</p>"
    }
  ]

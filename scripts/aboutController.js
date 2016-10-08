@@ -3,8 +3,10 @@
 
   //hides all sections except #about
   aboutController.index = function() {
-    $('#about').siblings().slideUp(2000, function() {
-      $('#about').slideDown(2000);
+    $('#about').siblings().slideUp(1000, function() {
+      $('#about').slideDown(1000, function() {
+        $('html, body').animate({scrollTop: $('#about').offset().top }, 500);
+      });
     });
   };
 

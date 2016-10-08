@@ -12,13 +12,14 @@
   };
 
   //function to append each project to the page
-  projectView.initIndexPage = function() {
-    $('#projects').empty();
-    Project.all.forEach(function(a){
-      $('#projects').append(a.toHtml());
-    });
-    projectView.setTeasers();
+  // projectView.initIndexPage = function() {
+  //   $('#projects').empty();
+  //   console.log('init called', Project.all);
+  //   Project.all.forEach(function(project){
+  //     $('#projects').append(project.toHtml());
+  //   });
+  //   projectView.setTeasers();
 
-  };
+  // };
   module.projectView = projectView;
 })(window);

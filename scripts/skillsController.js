@@ -3,8 +3,10 @@
 
   //hides all sections except #skills
   skillsController.index = function() {
-    $('#skills').siblings().slideUp(2000, function() {
-      $('#skills').slideDown(2000);
+    $('#skills').siblings().slideUp(1000, function() {
+      $('#skills').slideDown(1000, function() {
+        $('html, body').animate({scrollTop: $('#projects').offset().top }, 500);
+      });
     });
   };
 

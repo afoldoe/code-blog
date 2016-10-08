@@ -1,5 +1,20 @@
-
-
+nav .btn {
+  border: none;
+}
+nav .btn:hover {
+  color: #fff;
+  text-decoration: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2 px solid #fff;
+}
+nav a:hover {
+  text-decoration: none;
+  /*padding-bottom: 3rem;*/
+  /*transition: border .5s;*/
+  /*color: #fff;*/
+}
 .btn, .btn:link, .btn:visited {
   border-radius: 0.25em;
   border-style: solid;
@@ -26,6 +41,13 @@
   border: 1px solid #0074D9;
   -webkit-transition: background-color 0.3s, color 0.3s, border 0.3s;
   transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+#projects h3:hover {
+  color: #fff;
+}
+#projects a:hover {
+  color: #DBB93F;
+  text-decoration: none;
 }
 
 @media only screen and (min-width : 768px) and (max-width : 1400px) {

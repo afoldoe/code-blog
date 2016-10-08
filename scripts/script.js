@@ -8,20 +8,16 @@
     }, this);
   }
 
-  //compiles handlerbar template and returns the filled template so we can append to the page
-  Project.prototype.toHtml = function() {
-    var templateScript = $('#project-template').html();
-    var finalTemplate = Handlebars.compile(templateScript);
-    this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);//days since project was created
-    this.publishStatus = this.publishedOn ? this.daysAgo + ' days ago' : '(draft)';//tells how many days since the project was published
-    return finalTemplate(this);
-  };
-
   //returns each project in Project.all
-  Project.loadAll = function(rows) {
-    Project.all = rows.map(function(ele) {
-      return new Project(ele);
+  Project.loadAll = function() {
+    $('#projects').empty();
+    Project.all.forEach(function(project) {
+      getCompiledTemplate('projects').then(function(handlebarsCompile) {
+        var html = handlebarsCompile(project);
+        $('#projects').append(html);
+      });
     });
+    Project.all = [];
   };
 
   //creates a DB table for the projects
@@ -34,7 +30,8 @@
         'projectURL VARCHAR(200), ' +
         'publishedOn DATETIME NOT NULL, ' +
         'category VARCHAR(20), ' +
-        'body TEXT NOT NULL);',
+        'body TEXT NOT NULL, ' +
+        'imgURL VARCHAR(50));',
         function(result) {
           if(callback) callback();
         }
@@ -54,8 +51,8 @@
     webDB.execute(
       [
         {
-          'sql': 'INSERT INTO projects (title, author, projectURL, publishedOn, category, body) VALUES(?, ?, ?, ?, ?, ?);',
-          'data': [this.title, this.author, this.projectURL, this.publishedOn, this.category, this.body]
+          'sql': 'INSERT INTO projects (title, author, projectURL, publishedOn, category, body, imgURL) VALUES(?, ?, ?, ?, ?, ?, ?);',
+          'data': [this.title, this.author, this.projectURL, this.publishedOn, this.category, this.body, this.imgURL]
         }
       ],
       callback
@@ -90,23 +87,14 @@
 
   //Retrieves project data with ajax call if nothing is in the database table, if there is data in the table it is taken out and loaded to the index page
   Project.fetchAll = function(callback) {
-    webDB.execute('SELECT * FROM projects', function(rows) {
-      if(rows.length) {
-        Project.loadAll(rows);
-        callback();
-      } else {
-        $.getJSON('data/projects.json', function(projectData) {
-          projectData.forEach(function(item) {
-            var project = new Project(item);
-            project.insertProject();
-          });
-          webDB.execute('SELECT * FROM projects', function(rows) {
-            Project.loadAll(rows);
-            callback();
-          });
-        });
-      }
+    $.getJSON('data/projects.json', function(projectData) {
+      projectData.forEach(function(item) {
+        var project = new Project(item);
+        Project.all.push(project);
+      });
+      Project.loadAll();
     });
   };
   module.Project = Project;
+
 })(window);
