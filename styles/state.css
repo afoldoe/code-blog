@@ -42,12 +42,18 @@ nav a:hover {
   -webkit-transition: background-color 0.3s, color 0.3s, border 0.3s;
   transition: background-color 0.3s, color 0.3s, border 0.3s;
 }
+#portfolio-btn:hover {
+  color: #fff;
+}
 #projects h3:hover {
   color: #fff;
 }
 #projects a:hover {
   color: #DBB93F;
   text-decoration: none;
+}
+#bike-menu:hover {
+  color: #fff;
 }
 
 @media only screen and (min-width : 768px) and (max-width : 1400px) {

@@ -6,6 +6,7 @@
    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Arielle | Web Developer</title>
     <script src="https://use.fortawesome.com/2c3b87aa.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
     <link rel="stylesheet" type="text/css" src="vendor/styles/normalize.css">
     <link rel="stylesheet" type="text/css" href="styles/layout.css">
     <link rel="stylesheet" type="text/css" href="styles/state.css">
@@ -23,17 +24,31 @@
 
     <!-- header -->
     <section class="container-fluid" id="header">
-
+       <div class="sun">
+          <div class="ray_box">
+              <div class="ray ray1"></div>
+              <div class="ray ray2"></div>
+              <div class="ray ray3"></div>
+              <div class="ray ray4"></div>
+              <div class="ray ray5"></div>
+              <div class="ray ray6"></div>
+              <div class="ray ray7"></div>
+              <div class="ray ray8"></div>
+              <div class="ray ray9"></div>
+              <div class="ray ray10"></div>
+          </div>
+        </div>
       <!-- nav menu -->
       <nav class="container-fluid">
         <div class="row text-xs-center">
           <ul class="list-unstyled">
             <!--<a href="/" class="nav"><li class="btn btn-xs"><strong>HOME</strong></li></a>-->
-            <a href="/projects" class="nav"><li class="btn btn-xs"><strong>PORTFOLIO</strong></li></a>
-            <a href="/skills" class="nav"><li class="btn btn-xs"><strong>SKILLS</strong></li></a>
-            <a href="/about" class="nav"><li class="btn btn-xs"><strong>ABOUT</strong></li></a>
-            <a href="/contact" class="nav"><li class="btn btn-xs"><strong>CONTACT</strong></li></a>
-            <i class="fa fa-bicycle fa-lg"></i>
+            <a href="/projects"><li class="btn btn-xs"><strong>PORTFOLIO</strong></li></a>
+            <a href="/skills"><li class="btn btn-xs"><strong>SKILLS</strong></li></a>
+            <a href="/about"><li class="btn btn-xs"><strong>ABOUT</strong></li></a>
+            <a href="/contact" id="contact-nav"><li class="btn btn-xs"><strong>CONTACT</strong></li></a>
+            <a href="/" id="hello"><li class="btn btn-xs"><strong>Aaniin! (Hello!)</strong></li></a>
+            <a href="/"><li class="fa fa-bicycle fa-lg" id="bike-menu"></li></a>
           </ul>
         </div>
       </nav>
@@ -44,8 +59,7 @@
           Arielle Foldoe
           <br><small class="text-muted">Full-Stack Developer</small>
         </h1>
-        <h3 class="h3">Aaniin! (Hello!)</h3>
-        <a href="/projects" class="btn btn--s">View Portfolio</a>
+        <a href="/projects" id="portfolio-btn" class="btn btn--s">View Portfolio</a>
       </header>  
     </section>
     <!-- /header -->
@@ -59,7 +73,7 @@
           <section class="col-md-4">
             <img src ="img/profile.jpg" id="profilePic">
           </section>
-          <section class="col-md-8">
+          <section class="col-md-8" id="about-right">
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h3 class="panel-title">A Wild ARI appeared!</h3>
@@ -80,7 +94,7 @@
 
       <!-- projects section -->
         <section id="projects-section">
-          <h2 class="h2">Completed Projects</h2>
+          <h2 class="h2">Mission, We Have Launch</h2>
           <section id="projects" class="tab-content container">
             <div class="container text-xs-center">
               <div class="row">
@@ -92,25 +106,18 @@
 
         <!-- skills -->
           <section class="container" id="skills">
+            <h2 class="h2">Do or do not. There is no try.</h2>
             <div class="row">
-              <section class="col-md-6 text-xs-center" id="skills1">
+              <section class="col-md-6 text-xs-center" id="skills2">
                 <p>I’m a full-stack developer with a background in specialty coffee and a passion for integrating exceptional design with dynamic technologies. I believe teamwork makes the dream work and every puzzle has a solution.</p>
               </section>
-              <section class="col-md-2 text-xs-center">
+              <section class="col-md-6 text-xs-center" id="skills1">
                 <dl class="dl-horizontal">
                   <dt>HTML</dt>
                   <dd>HTML5</dd>
                   <dd>Handlebars</dd>
                   <dd>Pug</dd>
                 </dl>
-                <!--<h4 class=" h4">HTML</h4>
-                <ul class="list-unstyled list-group">
-                  <li>HTML5</li>
-                  <li>Handlebars</li>
-                  <li>Pug</li>
-                </ul>-->
-              </section>
-              <section class="col-md-2 text-xs-center">
                 <dl class="dl-horizontal">
                   <dt>CSS</dt>
                   <dd>SASS</dd>
@@ -118,15 +125,6 @@
                   <dd>Bootstrap/Skeleton</dd>
                   <dd>Angular Material Design</dd>
                 </dl>
-                <!--<h4 class="h4">CSS</h4>
-                <ul class="list-unstyled list-group">
-                  <li>SASS/SCSS/CSS</li>
-                  <li>Bootstrap</li>
-                  <li>Material Design</li>
-                  <li>Skeleton</li>
-                </ul>-->
-              </section>
-              <section class="col-md-2 text-xs-center">
                 <dl class="dl-horizontal">
                   <dt>JavaScript</dt>
                   <dd>Functional and OOP</dd>
@@ -134,14 +132,12 @@
                   <dd>Express</dd>
                   <dd>Node</dd>
                 </dl>
-                <!--<h4 class="h4">JavaScript</h4>
-                <ul class="list-unstyled list-group">
-                  <li>Functional and Object-oriented</li>
-                  <li>NodeJS</li>
-                  <li>AngularJS</li>
-                  <li>Webpack/Gulp</li>
-                  <li>TDD</li>
-                </ul>-->
+                <dl class="dl-horizontal">
+                  <dt>Other</dt>
+                  <dd>Webpack</dd>
+                  <dd>Gulp</dd>
+                  <dd>Git</dd>
+                </dl>
               </section>
             </div>
           </section>
@@ -153,7 +149,7 @@
           <div class="row">
             <section class="col-md-6 text-xs-center" id="contact1">
               <h3 class="h3">Let's be friends!</h3>
-              <form name="emailForm" method="post" action="send_form_email.php">
+              <form name="emailForm" method="POST" action="https://script.google.com/macros/s/AKfycbyi5f0k7vgNgFTDYLKsesCGKD84__-fOBonEoI4PSFoSx6s-Kg/exec">
                 <div class="form-group">
                   <label for="forName"><input name="formName" type="text" class="form-control" id="formName" placeholder="Name"></label>
                 </div>
@@ -167,7 +163,7 @@
                   <label for="formMessage"><textarea name="formMessage" type="" class="form-control" id="formMessage" placeholder="Message"></textarea></label>
                 </div>
                 <div class="form-group">
-                  <label for="formButton"><button type="submit" class="btn btn-default">Warp 9, Engage!</button>
+                  <label for="formButton"><button id="formButton" type="submit" class="btn btn-default">Warp 9, Engage!</button>
                 </div>
               </form>
             </section>
@@ -195,6 +191,7 @@
 
     <!-- /end page -->
 
+    <script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script type="text/javascript" src="vendor/scripts/bootstrap.min.js"></script>

@@ -1,31 +1,28 @@
-article {
-  padding: 2rem;
-}
-nav {
-  position: fixed;
-  top: 5%;
-  left: 10%;
-  display: inline-block;
-  z-index: 100;
-}
+
 section .h2 {
   text-align: center;
   margin-top: 5rem;
+  font-family: 'Droid Serif', serif;
+  color: #777;
 }
 header .h3 {
   margin-top: 5rem;
-}
-.nav {
-  display: none;
+  font-family: 'Droid Serif', serif;
 }
 .fa-bicycle {
   position: fixed;
-  top: 5%;
-  right: 5%;
+  top: 2.5rem;
+  right: 2rem;
 }
 .projectImg {
   height: 20rem;
   max-width: 30rem;
+}
+#bike-menu {
+  color: black;
+}
+#hello {
+  display: none;
 }
 #projects-section {
   border-bottom: 2px solid #DBB93F;
@@ -41,6 +38,9 @@ header .h3 {
   margin-bottom: 4rem;
   padding: 2rem;
   background: #DBB93F;
+  border-radius: .5rem;
+  color: #777;
+  font-family: 'Droid Serif', serif;
 }
 #about {
   margin-top: 5%;
@@ -58,9 +58,15 @@ header .h3 {
 #about img {
   margin-bottom: 10%;
 }
+#about h3 {
+  font-family: 'Droid Serif', serif;
+}
 #skills {
   border-bottom: 2px solid #DBB93F;
   text-align: center;
+}
+#skills h2 {
+  margin-bottom: 5rem;
 }
 #profilePic {
   width: 80%;
@@ -79,51 +85,160 @@ header .h3 {
 }
 #contact1 h3 {
   padding-bottom: 5%;
+  font-family: 'Droid Serif', serif;
+  color: #777;
 }
 
 /* Media Queries*/
-@media only screen and (min-width : 768px) and (max-width : 1400px) {
-  nav ul {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    margin: auto;
-    background-color: #DBB93F;
-    width: 100%;
-  }
+@media only screen and (min-width : 768px) {
   a {
     text-decoration: none;
     color: #373a3c;
   }
-  nav li {
-    display: inline;
-    padding: 5%;
+  header .h3 {
+    position: inline-block;
   }
-  nav .btn {
-    display: inline-block;
-    color: #373a3c;
-    margin-top: 0;
+  .sun { 
+    position: absolute;
+    top:5%;
+    left:15%;
+    margin: auto;  
+    width:5rem;
+    height:5rem;
+    border-radius:50%;	
+    background:white;
+    opacity:0.9;			
+    box-shadow: 0px 0px 40px 15px white;  
   }
-  .scrollDown {
-    opacity: 0;
-    transition: all .75s ease;
+
+  .ray_box {
+    position: absolute;
+    margin: auto;
+    top:0px;
+    left:0;
+    right:0;
+    bottom:0;	
+    width:70px;  
+    -webkit-animation: ray_anim 120s linear infinite;
+    animation: ray_anim 120s linear infinite;
   }
-  .scrollUp {
-    opacity: 1;
-    transition: all .75s ease;
+  .ray {  
+      background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+      background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%); 
+      margin-left:10px;
+      border-radius:80% 80% 0 0;
+      position:absolute;
+      opacity:0.1;
+  }
+
+  .ray1 {    
+      height:170px;
+      width:30px;
+    -webkit-transform: rotate(180deg);
+      top:-175px;
+      left: 15px;
+  }
+  .ray2 {
+      height:100px;
+      width:8px;
+    -webkit-transform: rotate(220deg);
+      top:-90px;
+      left: 75px;
+  }
+  .ray3 {
+      height:170px;
+      width:50px;
+    -webkit-transform: rotate(250deg);
+      top:-80px;
+      left: 100px;
+  }
+  .ray4 {
+      height:120px;
+      width:14px;
+    -webkit-transform: rotate(305deg);
+      top:30px;
+      left: 100px;
+  }
+  .ray5 {
+      height:140px;
+      width:30px;
+    -webkit-transform: rotate(-15deg);
+      top:60px;
+      left: 40px;
+  }
+  .ray6 {
+      height:90px;
+      width:50px;
+    -webkit-transform: rotate(30deg);
+      top:60px;
+      left: -40px;
+  }
+  .ray7 {
+      height:180px;
+      width:10px;
+    -webkit-transform: rotate(70deg);
+      top:-35px;
+      left: -40px;
+  }
+  .ray8 {
+      height:120px;
+      width:30px;
+    -webkit-transform: rotate(100deg);
+      top:-45px;
+      left:-90px;
+  }
+  .ray9 {
+      height:80px;
+      width:10px;
+    -webkit-transform: rotate(120deg);
+      top:-65px;
+      left:-60px;
+  }
+  .ray10 {
+      height:190px;
+      width:23px;
+    -webkit-transform: rotate(150deg);
+      top:-185px;
+      left: -60px;
+  }
+  @-webkit-keyframes ray_anim { 
+      0% { -webkit-transform: rotate(0deg); transform: rotate(0deg);}    
+      100% { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
+  }
+  .fa-bicycle {
+    position: fixed;
+    top: 2.5rem;
+    right: 5rem;
+  }
+  #projects-section {
+    border-bottom: none;
+  }
+  #about-right {
+    margin-top: 15rem;
+  }
+  #bike-menu {
+    display: none;
   }
   #about {
-      border-bottom: 5px solid #DBB93F;
+    border-bottom: 5px solid #DBB93F;
   }
   #projects {
-      border-bottom: 5px solid #DBB93F;
+    border-bottom: 5px solid #DBB93F;
+    padding: 5rem;
+    min-width: 100%;
+  }
+  #skills h2 {
+    margin-bottom: 5rem;
   }
   #skills {
     border-bottom: 5px solid #DBB93F;
   }
+  #skills2 {
+    margin-top: 15rem;
+  }
   #skills1 {
-    border-right: 2px solid #DBB93F;
+    border-left: 2px solid #DBB93F;
+    margin-bottom: 5rem;
   }
   #contact {
     border-bottom: 5px solid #DBB93F;
@@ -136,6 +251,17 @@ header .h3 {
     margin-top: 10%;
     margin-left: 10%;
   }
+  #contact-nav {
+    margin-right: 75rem;
+  }
+  #hello {
+    position: fixed;
+    top: 2rem;
+    right: 10rem;
+    z-index: 201;
+    display: inline-block;
+  }
+  
 
 
 }
